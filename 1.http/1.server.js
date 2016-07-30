@@ -1,10 +1,12 @@
 var http = require('http')
 
+
+//创建一个简单的服务器
 http.createServer((request, response) => {
     console.log(request.method)    //请求的方法 (get/post)）
     console.log(request.url)        //请求的url (/)
     console.log(request.httpVersion)    //http版本号 (1.1)
-    console.log(request.headers)        //请求头的  请求头 
+    console.log(request.headers)        //请求头的对象 
 
 //  { 
 //   host: 'localhost:9090',
