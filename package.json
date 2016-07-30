@@ -1,0 +1,25 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "learning node ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiansimin88/node.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "qiansimin <qiansimin@shining3d.com> (qiansimin_shining3d.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiansimin88/node/issues"
+  },
+  "homepage": "https://github.com/qiansimin88/node#readme",
+  "devDependencies": {
+    "mime": "^1.3.4"
+  }
+}
