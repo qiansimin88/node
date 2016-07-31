@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+    </head>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <body>
+        <button type="submit" id="sub">上传数据</button>
+        <p id="hehe"></p>
+    </body>
+    <script>
+        $('#sub').click(() => {
+            $.ajax({
+                url: '/clock',
+                method: 'post',
+                data: {name:'qiansimin', age: 18},
+                success: function (data) {
+                    $('#hehe').html(data)
+                },
+                error: function (err) {
+                    $('#hehe').html(err)
+                },
+                statusCode: {
+                    404: function (){
+                        window.alert('你要的页面不存在')
+                    }
+                }
+            })
+        })
+    </script>
+</html>

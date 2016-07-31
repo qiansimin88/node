@@ -8,7 +8,7 @@ http.createServer((request, response) => {
     console.log(request.httpVersion)    //http版本号 (1.1)
     console.log(request.headers)        //请求头的对象 
 
-    req.setEncoding('utf-8')   //设置请求的编码
+    // req.setEncoding('utf-8')   //设置请求的编码
 //  { 
 //   host: 'localhost:9090',
 //   connection: 'keep-alive',
