@@ -1,6 +1,6 @@
 var url = require('url'),
     str = 'https://github.com:8082/qiansimin88/node?name=qsm&age=18#hehe'
-//url转成对象
+//url转成对象   第二个参数为true就把query转成对象
 console.log(url.parse(str, true))
 
 // {
