@@ -11,8 +11,6 @@ var str = 'name===qiansimin*age===18'
 console.log(querystring.parse(str, '*', '==='))
 //{ name: 'qiansimin', age: '18' }
 
-
 // 二 把对象转成字符串
-
 console.log(querystring.stringify({ name: 'qiansimin', age: '18' }))
 //name=qiansimin&age=18
