@@ -16,16 +16,18 @@ http.createServer((req, res) => {
         //设置请求流的编码变成字符串     不然数据就默认成了buffer了
         req.setEncoding('utf8')
         req.on('data', data => {
-            //因为data是持续流 所以必须累加
-            result += data
+            //因为data是持续流 所以必须累加 有可能含有中文 所以要解码 比较靠谱
+            result += decodeURIComponent(data)
         })
         //当所有的数据传输结束  触发end事件
         req.on('end', () => {
             //post表单请求 会把表单key value转成查询字符串放在请求体中
             console.log(result)  //打印执勤累加的数据
+            //设置响应类型
+            res.setHeader('Content-Type', 'text/html;charset=utf-8')
             res.end(result)
         })
-    }
+    } 
   }else {
     res.end('not found')
   }
