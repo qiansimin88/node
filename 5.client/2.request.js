@@ -18,8 +18,8 @@ var option = {
 //请求是个可读流
 var request = http.request(option, (res) => {
     var str = ''
+    //不设置编码  得到的是buffer
     res.setEncoding('utf-8')
-
     //接受服务器返回来的响应
     res.on('data', (data) => {
         str += data
