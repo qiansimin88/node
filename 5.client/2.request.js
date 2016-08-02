@@ -7,7 +7,7 @@ var fs = require('fs')
 var option = {
     host: 'localhost',
     port: 9090,
-    headers: {name: 'qiasnimin'},
+    headers: {'Content-Type': 'application/json'}, //设置请求头是 json
     path: '/',
     method: 'post'    //只有post请求才能发请求体
 }
@@ -31,5 +31,5 @@ var request = http.request(option, (res) => {
 })
 
 //request是个可写流  写入请求体
-request.write('1234')
+request.write(JSON.stringify({name: 'qiansimin'}))
 request.end()   //调用end方法的时候才会真正的向服务器发送请求

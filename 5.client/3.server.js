@@ -13,7 +13,12 @@ http.createServer((req, res) => {
     })
  
     req.on('end', (data) => {
-        //返回请求体的数据
+        // console.log(req.headers['content-type'])
+        var requestType = req.headers['content-type']
+        //如果请求的类型是json
+        if(requestType == 'application/json') {
+            // res.end(JSON.parse(str))
+        }
         res.end(str)
     })
 }).listen(9090)
