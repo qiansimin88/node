@@ -5,14 +5,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+qweqasd
 </body>
 <script>
-
     //跨域的解决的方案
-    
     var xhr = new XMLHttpRequest();
-    xhr.open('get','http://localhost:9090/ajax',true);
+    xhr.open('get','http://localhost:9092/ajax',true);
+    
     xhr.withCredentials = true;
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
