@@ -5,11 +5,11 @@ var http = require('http')
 var fs = require('fs')
 //请求配置项
 var option = {
-    hostname: 'localhost',
+    host: 'localhost',
     port: 9090,
     headers: {name: 'qiasnimin'},
     path: '/',
-    method: 'get'
+    method: 'post'    //只有post请求才能发请求体
 }
 
 // http.request(option, callback)
@@ -19,6 +19,8 @@ var option = {
 var request = http.request(option, (res) => {
     var str = ''
     res.setEncoding('utf-8')
+
+    //接受服务器返回来的响应
     res.on('data', (data) => {
         str += data
     })
