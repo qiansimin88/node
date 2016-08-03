@@ -10,7 +10,7 @@ var fs = require('fs')
 http.createServer((req, res) => {
     //请求百度百家
    var reqbaijia =  http.request({
-        host: 'baijia.baidu.com',
+        host: 'baijia.baidu.com',   //这里可以 请求本机或者本公司的接口 比如localhost
         path: '/',
         method: 'get'
     }, (response) => {
