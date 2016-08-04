@@ -24,9 +24,7 @@ function waitAllSync (callback){
             callback(one, two)
         } 
     }) 
-   
 }
-
 
 waitAllSync((one, two) => {
     console.log(one, two)
