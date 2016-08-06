@@ -16,3 +16,6 @@ app.all('*', (req, res) => {
 })
 
 app.listen(9090)
+
+
+module.exports = app
