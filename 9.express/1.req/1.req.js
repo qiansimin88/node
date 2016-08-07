@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 
 app.get('*', (req, res) => {
     console.log(req.hostname)       //主机名
-    console.log(req.query)          //查询字符串的队形
+    console.log(req.query)          //get请求查询字符串的队形{ name: 'qiansimin', age: '12' }
     console.log(req.path)           //路径
     console.log(req.params)  
     console.log(req.port)   

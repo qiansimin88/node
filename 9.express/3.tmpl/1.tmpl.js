@@ -3,7 +3,7 @@ var express = require('express')
 var path = require('path')
 
 var app = express()
-
+//set存  get取  
 // 指定模板引擎
 app.set('view engine', 'ejs')
 
