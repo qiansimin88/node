@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/qiansimin88/node#readme",
   "devDependencies": {
+    "async": "^2.0.1",
     "body-parser": "^1.15.2",
     "crypto": "0.0.3",
     "express-session": "^1.14.0",
