@@ -4,6 +4,7 @@ var path = require('path')
 var util = require('./util')
 var test = require('./text/3.test.js')
 
+//串行 无关联
 async.series([
 	function (cb) {
 		setTimeout(() => {
