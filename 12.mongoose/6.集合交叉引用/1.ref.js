@@ -41,7 +41,8 @@ user.save((err, doc) => {
           // title: '羊脂球',
           // author: { __v: 0, username: '钱思敏', _id: 57e7f11c6ad457a712fa13ce },
           // _id: 57e7f11c6ad457a712fa13cf }
-         articleModel.findOne({title:'羊脂球'}).populate('articleUser').exec((err, doc) => {
+        //populate填  想查看的字段 即可
+         articleModel.findOne({title:'羊脂球'}).populate('author').exec((err, doc) => {
             console.log(doc)
          })
     })
